@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaskTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-07T02:11:43" hostname="nakamura.local" time="0.057">
+<testsuite name="TaskTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-07T03:09:36" hostname="nakamura.local" time="0.012">
   <properties/>
-  <testcase name="isExpired()" classname="TaskTest" time="0.054"/>
-  <testcase name="countDaysToDeadLineDate()" classname="TaskTest" time="0.002"/>
+  <testcase name="sum()" classname="TaskTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
