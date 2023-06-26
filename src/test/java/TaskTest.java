@@ -44,8 +44,7 @@ class TaskTest {
         assertEquals(-5, task4.countToDeadLineDate());
     }
 
-
-
+    
     @Test
     void onDeadLine() throws URISyntaxException, IOException, ParseException, InterruptedException {
         Calendar c1 = Calendar.getInstance();
@@ -57,7 +56,7 @@ class TaskTest {
         assertFalse(task2.onDeadLine());
     }
 
-
+    // prac26
     @Test
     void getTotalActualTime() {
         Task task1 = new Task("タスク1", "2023/05/26");
@@ -74,6 +73,7 @@ class TaskTest {
         assertEquals(0, Task.getTotalActualTime(tasks3));
     }
 
+    // prac25
     @Test
     void sum() {
         int[] arr1 = {10,20,30};

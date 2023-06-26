@@ -44,6 +44,7 @@ public class Task {
         }
     }
 
+    // prac26
     public static int sum(int[] array) {
         int sum = 0;
         for(int i = 0; i < array.length; i++) {
@@ -58,6 +59,7 @@ public class Task {
     }
 
 
+    // prac26
     public static int getTotalActualTime(Task[] tasks) {
         return Arrays
                 .stream(tasks)
