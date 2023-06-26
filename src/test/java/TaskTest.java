@@ -27,6 +27,7 @@ class TaskTest {
         assertEquals(3,task1.countToDeadLineDate());
     }
 
+    //prac25
     @Test
     void sum() {
         int[] arr1 = {10,20,30};
