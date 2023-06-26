@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
+import java.util.Arrays;
 import java.util.Calendar;
 
 
@@ -8,6 +9,7 @@ public class Task {
     String name;
     String deadLineDate;
     int actualMinuteTime;
+
 
 
     public Task(String name, String deadLineDate) {
@@ -24,6 +26,15 @@ public class Task {
         }
     }
 
+
+    public boolean onDeadLine() throws URISyntaxException, IOException, InterruptedException, ParseException{
+        if(this.countToDeadLineDate() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public int countToDeadLineDate() throws ParseException {
         Calendar todayC = Calendar.getInstance();
         if(todayC.getTime().after(DateUtil.validateAndParseDate(this.deadLineDate))) {
@@ -33,8 +44,6 @@ public class Task {
         }
     }
 
-
-
     public static int sum(int[] array) {
         int sum = 0;
         for(int i = 0; i < array.length; i++) {
@@ -42,5 +51,19 @@ public class Task {
         }
         return sum;
     }
+
+
+    private int getActualMinuteTime() {
+        return this.actualMinuteTime;
+    }
+
+
+    public static int getTotalActualTime(Task[] tasks) {
+        return Arrays
+                .stream(tasks)
+                .mapToInt(Task::getActualMinuteTime)
+                .sum();
+    }
+
 
 }
