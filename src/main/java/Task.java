@@ -61,10 +61,12 @@ public class Task {
 
     // prac26
     public static int getTotalActualTime(Task[] tasks) {
-        return Arrays
-                .stream(tasks)
-                .mapToInt(Task::getActualMinuteTime)
-                .sum();
+        //convert Task[] to int[]
+        int[] actualMinuteTimeArray = new int[tasks.length];
+        for(int i = 0; i < tasks.length; i++) {
+            actualMinuteTimeArray[i] = tasks[i].getActualMinuteTime();
+        }
+        return sum(actualMinuteTimeArray);
     }
 
 
